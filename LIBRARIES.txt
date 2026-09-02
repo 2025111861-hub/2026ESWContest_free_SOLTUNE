@@ -1,0 +1,31 @@
+Arduino Nano ESP32 compile-verified environment
+================================================
+
+Board core
+- Arduino ESP32 Boards by Arduino: 2.0.18-arduino.5
+- Board: Arduino Nano ESP32
+- FQBN: arduino:esp32:nano_nora
+- Pin Numbering: By GPIO number (legacy) -- REQUIRED for OneWire 2.3.8
+
+Install from Arduino IDE Library Manager
+- OneWire by Paul Stoffregen: 2.3.8
+- DallasTemperature by Miles Burton: 4.0.6
+- DHT sensor library by Adafruit: 1.4.7
+- Adafruit Unified Sensor by Adafruit: 1.1.15
+- Adafruit MLX90614 Library by Adafruit: 2.1.6
+- Adafruit BusIO by Adafruit: 1.17.4
+- AccelStepper by Mike McCauley: 1.64.0
+
+Included with the board/core; do not install separately
+- Wire
+- Preferences
+
+Compile result
+- Program storage: 354777 bytes (11% of 3145728)
+- Dynamic memory: 31844 bytes (9% of 327680)
+
+Note
+- The installed OneWire 2.3.8 source emits two preprocessor warnings on this
+  ESP32 core, but compilation and linking complete successfully.
+- OneWire 2.3.8 bypasses the Nano ESP32 Arduino-pin remapping. This package
+  therefore uses Dn/An aliases and requires the legacy GPIO numbering option.
