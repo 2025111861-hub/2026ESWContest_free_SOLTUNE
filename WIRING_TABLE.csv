@@ -1,0 +1,30 @@
+분류,장치,장치 단자,연결 대상,전원/신호,필수 확인
+센서,GUVA-S12SD3528,OUT 또는 AO,Nano A0,0~3.3 V 아날로그,보유 모듈의 OUT 최대전압 측정
+센서,GUVA-S12SD3528,VCC,Nano 3V3,3.3 V 전원,3.3 V 동작 여부 확인
+센서,GUVA-S12SD3528,GND,공통 GND,GND,
+센서,3핀 조도센서,OUT,Nano A1,0~3.3 V 아날로그,OUT이 AO와 같은 단자인지 확인
+센서,3핀 조도센서,VCC,Nano 3V3,3.3 V 전원,밝음/어두움 Raw 방향 확인
+센서,3핀 조도센서,GND,공통 GND,GND,
+센서,DS18B20,DATA,Nano D2,3.3 V logic,DATA-3V3 4.7kΩ pull-up(모듈 내장 시 생략)
+센서,DS18B20,VCC,Nano 3V3,3.3 V 전원,
+센서,DS18B20,GND,공통 GND,GND,
+센서,DHT11,DATA 또는 S,Nano D3,3.3 V logic,
+센서,DHT11,VCC,Nano 3V3,3.3 V 전원,5 V 구동 금지
+센서,DHT11,GND,공통 GND,GND,
+위치,Upper Endstop,S,Nano D4,기본 눌림=LOW,S HIGH가 3.3 V 이하인지 측정
+위치,Upper Endstop,- 또는 GND,공통 GND,GND,
+위치,Upper Endstop,+ 또는 VCC,Nano 3V3 또는 미사용,모듈 사양에 따름,5 V 금지
+위치,Lower Endstop,사용하지 않음,Nano D5 비워 둠,미연결,하단은 DEPLOY_STEPS 소프트웨어 한계와 물리적 막음캡 사용
+구동,ULN2003,IN1,Nano D6,3.3 V 제어,
+구동,ULN2003,IN2,Nano D7,3.3 V 제어,
+구동,ULN2003,IN3,Nano D8,3.3 V 제어,
+구동,ULN2003,IN4,Nano D9,3.3 V 제어,
+구동,ULN2003,+ 또는 VCC,외부 안정화 5 V +,모터 전원,Nano 3V3와 연결 금지
+구동,ULN2003,- 또는 GND,외부 5 V GND 및 Nano GND,공통 GND,공통 접지 필수
+구동,28BYJ-48,5핀 플러그,ULN2003 모터 소켓,5 V 모터,키 방향 확인
+센서,MLX90614,SDA,Nano A4/SDA,I2C,버스 pull-up 전압 3.3 V 이하
+센서,MLX90614,SCL,Nano A5/SCL,I2C,버스 pull-up 전압 3.3 V 이하
+센서,MLX90614,VCC 또는 VIN,모듈 사양에 따른 전원,사양 미확정,5 V형이면 I2C 양방향 레벨 시프터 사용
+센서,MLX90614,GND,공통 GND,GND,
+전원,Arduino Nano ESP32,USB,PC 또는 USB 전원,보드 전원,외부 모터 5 V +와 분리
+전원,외부 5 V 전원,GND,Nano GND 및 ULN2003 GND,공통 GND,반드시 연결
